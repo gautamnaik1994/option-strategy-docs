@@ -19,6 +19,8 @@ const config = {
   organizationName: "gautamnaik1994", // Usually your GitHub org/user name.
   projectName: "option-strategy-docs", // Usually your repo name.
 
+
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -116,6 +118,14 @@ const config = {
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
+      },
+      announcementBar: {
+        id: 'message',
+        content:
+          'Site under contruction',
+        backgroundColor: 'tomato',
+        textColor: 'white',
+        isCloseable: true,
       },
       navbar: {
         title: "Option Strategies",
