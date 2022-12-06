@@ -18,13 +18,16 @@
   --ifm-color-primary-lightest: #5d6dc6;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "Ubuntu", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ifm-font-family-base: "Ubuntu", system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   --ifm-footer-padding-vertical: var(--ifm-spacing-vertical);
-  --ifm-footer-padding-horizontal: var(--ifm-spacing-horizontal)
+  --ifm-footer-padding-horizontal: var(--ifm-spacing-horizontal);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #4bacfe;
   --ifm-color-primary-dark: #2a9dfe;
   --ifm-color-primary-darker: #1a95fe;
@@ -35,3 +38,124 @@
   --ifm-background-color: #212738;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@mixin desktop {
+  @media (min-width: 996px) {
+    @content;
+  }
+}
+
+.menu {
+  font-weight: var(--ifm-font-weight-regular);
+}
+
+.hero-banner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 996px) {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribute-card {
+  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal);
+  background: var(--bg-color, --ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  color: var(--fg-color, #333);
+  padding-left: 70px;
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 15px;
+    top: 23px;
+    font-size: calc(var(--ifm-font-size-base) * 2.5);
+  }
+  .title {
+    margin-bottom: 0.5rem;
+    // color:var(--ifm-background-surface-color);
+  }
+  .content {
+    margin-bottom: 0;
+  }
+}
+
+.attribute-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.leg {
+  border-bottom: 1px solid var(--ifm-font-color-base);
+  .top-section {
+    display: grid;
+    grid-template-columns: 30px 50px 40px 30px auto 1fr;
+    grid-gap: 10px;
+    padding: 8px 0;
+    > div {
+      text-align: center;
+      border-radius: 3px;
+      color: #333;
+      border: 1px solid transparent;
+      font-weight: 500;
+    }
+    @include desktop {
+      grid-template-columns: 50px 60px 50px 50px 1fr 1fr;
+      grid-template-rows: 50px;
+      grid-gap: 15px;
+      padding: 15px 0;
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(var(--ifm-font-size-base) * 1.2);
+      }
+    }
+    .transaction {
+      &-B {
+        background: #81c784;
+      }
+      &-S {
+        background: #e57373;
+      }
+    }
+    .side {
+      &-PE {
+        background: #80deea;
+      }
+      &-CE {
+        background: #ce93d8;
+      }
+    }
+    .more-info {
+      background: white;
+      border-color: #212738;
+    }
+    .lot-size {
+      background: #ececec;
+    }
+    .money-ness {
+      &-ITM {
+        background: #b0bec5;
+      }
+      &-ATM {
+        background: #bdbdbd;
+      }
+      &-OTM {
+        background: #ececec;
+      }
+    }
+  }
+}
+
