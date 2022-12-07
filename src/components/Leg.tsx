@@ -26,7 +26,6 @@ export default function Leg({
         <div className={`money-ness money-ness-${moneyNess}`}>{moneyNess}</div>
         <div className={`side side-${side}`}>{side}</div>
         <div className={`lot-size`}>{lotSize}</div>
-        <div className="spacer"></div>
         <div className="more-info">{moreInfo}</div>
       </div>
       {children && <div className="bottom-section">{children}</div>}
