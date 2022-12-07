@@ -27,7 +27,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --ifm-color-primary: #4bacfe;
   --ifm-color-primary-dark: #2a9dfe;
   --ifm-color-primary-darker: #1a95fe;
@@ -35,7 +35,7 @@
   --ifm-color-primary-light: #6cbbfe;
   --ifm-color-primary-lighter: #7cc3fe;
   --ifm-color-primary-lightest: #add9ff;
-  --ifm-background-color: #212738;
+  // --ifm-background-color: #212738;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -65,25 +65,28 @@
   justify-content: center;
 }
 
-.attribute-card {
-  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal);
+.attribute {
+  padding: 10px;
   background: var(--bg-color, --ifm-color-primary);
   border-radius: var(--ifm-global-radius);
   color: var(--fg-color, #333);
-  padding-left: 70px;
+  padding-left: 65px;
   position: relative;
+  font-weight: 700;
+  line-height: calc(var(--ifm-line-height-base) * 0.8);
   .icon {
     position: absolute;
     left: 15px;
-    top: 23px;
-    font-size: calc(var(--ifm-font-size-base) * 2.5);
+    top: 16px;
+    font-size: calc(var(--ifm-font-size-base) * 2.2);
   }
   .title {
-    margin-bottom: 0.5rem;
     // color:var(--ifm-background-surface-color);
+    color: rgb(0 0 0 / 74%);
   }
   .content {
-    margin-bottom: 0;
+    font-size: calc(var(--ifm-font-size-base) * 1.25);
+    margin-top: 4px;
   }
 }
 
@@ -98,11 +101,14 @@
 
 .leg {
   border-bottom: 1px solid var(--ifm-font-color-base);
+  padding: 8px 0;
+  @include desktop {
+    padding: 15px 0;
+  }
   .top-section {
     display: grid;
     grid-template-columns: 30px 50px 40px 30px auto 1fr;
     grid-gap: 10px;
-    padding: 8px 0;
     > div {
       text-align: center;
       border-radius: 3px;
@@ -114,7 +120,6 @@
       grid-template-columns: 50px 60px 50px 50px 1fr 1fr;
       grid-template-rows: 50px;
       grid-gap: 15px;
-      padding: 15px 0;
       > div {
         display: flex;
         align-items: center;
@@ -157,5 +162,21 @@
       }
     }
   }
+  .bottom-section {
+    background: rgb(128 128 128 / 50%);
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    @include desktop {
+      font-size: var(--ifm-font-size-base);
+    }
+  }
+}
+
+.graph {
+  border-radius: var(--ifm-global-radius);
+  width: 100%;
+  height: auto;
 }
 
