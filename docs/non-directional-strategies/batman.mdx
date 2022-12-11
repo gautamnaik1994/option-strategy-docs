@@ -1,0 +1,55 @@
+---
+tags:
+  - sideways
+  - less-volatile
+  - month-start
+  - neutral
+---
+
+# Batman
+<img className="graph" src="/img/graphs/batman.svg" />
+
+## Features
+<grid>
+  <attribute title="View" icon="visibility" color="info">
+    Neutral
+  </attribute>
+  <attribute title="Premium" icon="currency_exchange" color="info">
+    Net Credit
+  </attribute>
+  <attribute title="Margin" icon="currency_rupee" color="info">
+    50000
+  </attribute>
+  <attribute title="POP" icon="percent" color="success">
+    80%
+  </attribute>
+  <attribute title="Max Loss" icon="dangerous" color="warning">
+    Limited
+  </attribute>
+  <attribute title="Profit" icon="payments" color="info">
+    Limited
+  </attribute>
+</grid>
+
+## Rules
+
+- INDIA VIX below 21
+- Apply only in monthly expiry before **35** days
+- Exit before 15 days
+
+## Legs
+
+<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="-1000 Outside"/>
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-500 Outside"/>
+<leg side="PE"  transaction="B" moneyNess="ITM" lotSize={1} moreInfo="+300 Inside" />
+
+<leg side="CE"  transaction="B" moneyNess="ITM" lotSize={1} moreInfo="-300 Inside" />
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="500 Outside"/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="1000 Outside"/>
+
+## Adjustments
+- If market is going up above 16500 then shift sell put on higher side
+- If market is falling then below 15000 shift sell put on lower level
+
+
+## Example

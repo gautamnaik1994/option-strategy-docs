@@ -2,7 +2,7 @@
 <rect width="1200" height="630" fill="#212738"/>
 <line x1="598.761" y1="0.5" x2="598.761" y2="629.5" stroke="#808080" stroke-linecap="round" stroke-dasharray="4 4"/>
 <line x1="1199.5" y1="315.5" x2="0.5" y2="315.5" stroke="#808080" stroke-linecap="round" stroke-dasharray="4 4"/>
-<path d="M80 485H500.588L691.765 145H1120" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977 473.063L667.437 185L531 185L223 473.063" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <g style="mix-blend-mode:darken">
 <rect y="316" width="1200" height="314" fill="#F44336"/>
 </g>

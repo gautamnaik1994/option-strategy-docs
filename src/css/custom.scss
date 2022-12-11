@@ -166,7 +166,7 @@ html[data-theme="dark"] {
     }
   }
   .bottom-section {
-    background: hsl(0deg 0% 30% / 30%);
+    background-color: var(--ifm-menu-color-background-active);
     border-radius: 5px;
     padding: 2px 10px;
     margin-top: 10px;

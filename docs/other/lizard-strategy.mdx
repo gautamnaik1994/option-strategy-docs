@@ -1,0 +1,46 @@
+---
+tags:
+  - bullish
+  - less-volatile
+  - month-middle
+  - before-holiday
+  - neutral
+---
+
+# Lizard
+<img className="graph" src="/img/graphs/lizard.svg" />
+
+## Features
+<grid>
+  <attribute title="View" icon="visibility" color="info">
+    Neutral to Bullish
+  </attribute>
+  <attribute title="Premium" icon="currency_exchange" color="info">
+    Net Credit
+  </attribute>
+  <attribute title="Margin" icon="currency_rupee" color="info">
+    50000
+  </attribute>
+  <attribute title="POP" icon="percent" color="success">
+    80%
+  </attribute>
+  <attribute title="Max Loss" icon="dangerous" color="warning">
+    Unlimited
+  </attribute>
+  <attribute title="Profit" icon="payments" color="info">
+    Limited
+  </attribute>
+</grid>
+
+## Rules
+
+## Legs
+
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-300"/>
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="300" />
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="400" />
+
+## Adjustments
+
+
+## Example

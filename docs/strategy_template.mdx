@@ -6,7 +6,7 @@ tags:
   - month-start
 ---
 
-# Bull Put Spread
+# Default Stategy Template
 <img className="graph" src="/img/graphs/bull-x-spread.svg" />
 
 ## Features
@@ -21,36 +21,29 @@ tags:
     50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-		40% - 60%
+    80%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
     Net premium
   </attribute>
-  <attribute title="Max Profit" icon="payments" color="info">
+  <attribute title="Profit" icon="payments" color="info">
     Limited
   </attribute>
 </grid>
 
 ## Rules
 
-- Check for long buildup stocks and short covering stocks in [Futures Dashboard](https://opstra.definedge.com/futures/dashboard)
-- View should be mildly bullish
-
-:::tip
-
-Check for POP for both Call side and Put side and accordingly take trade
-
-:::
-
 ## Legs
 
-<leg side="PE"  transaction="S" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="Max OI"/>
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="Max OI">
+	Delta should be 0.5
+</leg>
+<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo="Max OI"/>
+<leg side="PE"  transaction="S" moneyNess="ITM" lotSize={2} moreInfo="Max OI"/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="Max OI"/>
 
 
 ## Adjustments
 
 
-
 ## Example
-
