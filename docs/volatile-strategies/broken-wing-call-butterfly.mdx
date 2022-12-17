@@ -1,33 +1,31 @@
 ---
 tags:
-  - bullish
+  - bearish
   - less-volatile
-  - month-middle
-  - before-holiday
+  - month-end
   - neutral
-  - bullish-neutral
-  - neutral-bullish
+  - bearish-neutral
 ---
 
-# Lizard
-<img className="graph" src="/img/graphs/lizard.svg" />
+# Broken Wing Put Butterfly
+<img className="graph" src="/img/graphs/broken-wing-call-butterfly.svg" />
 
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Neutral to Bullish
+    Neutral to Bearish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
     Net Credit
   </attribute>
   <attribute title="Margin" icon="currency_rupee" color="info">
-    Greater than 100000
+    Around 50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-    Greater than 50%
+    80%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
-    Unlimited
+    Limited
   </attribute>
   <attribute title="Profit" icon="payments" color="info">
     Limited
@@ -38,15 +36,15 @@ tags:
 
 :::info
 
-Make sure that net premium is received and strategy should be in profit on higher side
+Strategy must be profitable on one side
 
 :::
 
 ## Legs
 
-<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-300"/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="300" />
-<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="400" />
+<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="400" />
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="800" />
 
 ## Adjustments
 

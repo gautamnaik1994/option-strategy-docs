@@ -1,21 +1,21 @@
 ---
 tags:
-  - bullish
+  - bearish
   - less-volatile
   - month-middle
   - before-holiday
   - neutral
-  - bullish-neutral
-  - neutral-bullish
+  - bearish-neutral
+  - neutral-bearish
 ---
 
-# Lizard
-<img className="graph" src="/img/graphs/lizard.svg" />
+# Reverse Lizard
+<img className="graph" src="/img/graphs/reverse-lizard.svg" />
 
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Neutral to Bullish
+    Neutral to Bearish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
     Net Credit
@@ -38,7 +38,7 @@ tags:
 
 :::info
 
-Make sure that net premium is received and strategy should be in profit on higher side
+Make sure that net premium is received and strategy should be in profit on lower side
 
 :::
 
@@ -46,7 +46,7 @@ Make sure that net premium is received and strategy should be in profit on highe
 
 <leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-300"/>
 <leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="300" />
-<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="400" />
+<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="400" />
 
 ## Adjustments
 

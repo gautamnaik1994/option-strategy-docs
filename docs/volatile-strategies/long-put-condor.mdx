@@ -1,0 +1,57 @@
+---
+tags:
+  - bullish
+  - bearish
+  - bullish-bearish
+  - volatile
+  - before-event
+---
+
+# Long Put Condor
+<img className="graph" src="/img/graphs/long-call-condor.svg" />
+
+## Features
+<grid>
+  <attribute title="View" icon="visibility" color="info">
+    Volatile/ Both Side
+  </attribute>
+  <attribute title="Premium" icon="currency_exchange" color="info">
+    Net Credit
+  </attribute>
+  <attribute title="Margin" icon="currency_rupee" color="info">
+    Around 50000
+  </attribute>
+  <attribute title="POP" icon="percent" color="success">
+	Greater than 50%
+  </attribute>
+  <attribute title="Max Loss" icon="dangerous" color="warning">
+    Limited
+  </attribute>
+  <attribute title="Max Profit" icon="payments" color="info">
+    Limited
+  </attribute>
+</grid>
+
+## Rules
+
+- Trade should be taken before some days of results or any other event
+- Use the Volatility List from NSE website
+
+:::tip
+Check whether the Put side or Call side is giving higher POP, and accordingly decide
+:::
+
+
+## Legs
+
+<leg side="PE"  transaction="S" moneyNess="ITM" lotSize={1} moreInfo="200"/>
+<leg side="PE"  transaction="B" moneyNess="ITM" lotSize={1} moreInfo="100"/>
+<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="-100"/>
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-200"/>
+
+
+## Adjustments
+
+
+
+## Example
