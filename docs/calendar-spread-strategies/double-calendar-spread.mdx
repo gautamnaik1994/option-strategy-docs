@@ -1,0 +1,60 @@
+---
+tags:
+  - Neutral
+  - volatile
+  - non-volatile
+  - expiry-week
+---
+
+# Double Calendar Spread
+<img className="graph" src="/img/graphs/double-calendar-spread.svg" />
+
+## Features
+<grid>
+  <attribute title="View" icon="visibility" color="info">
+    Flat
+  </attribute>
+  <attribute title="Premium" icon="currency_exchange" color="info">
+    Net Credit
+  </attribute>
+  <attribute title="Margin" icon="currency_rupee" color="info">
+    Less than 50000
+  </attribute>
+  <attribute title="POP" icon="percent" color="success">
+	Less than 50%
+  </attribute>
+  <attribute title="Max Loss" icon="dangerous" color="warning">
+    Limited
+  </attribute>
+  <attribute title="Max Profit" icon="payments" color="info">
+    Limited
+  </attribute>
+</grid>
+
+## Rules
+
+- Find out range for near monthly expiry
+- Max Call OI is upper range & Max Put OI is downside range
+- Apply before 30 days expiry
+- India VIX below 21
+- Hold for 15 days
+
+:::caution
+
+Any event news then avoid
+
+:::
+
+## Legs
+
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="Monthly Expiry"/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="Next Monthly Expiry"/>
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="Monthly Expiry"/>
+<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="Next Monthly Expiry"/>
+
+
+## Adjustments
+
+
+
+## Example

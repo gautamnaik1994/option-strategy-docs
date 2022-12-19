@@ -12,19 +12,19 @@ tags:
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Moderately Bullish
+    Moderately Bearish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
-    Net Debit
+    Net Credit
   </attribute>
   <attribute title="Margin" icon="currency_rupee" color="info">
-    Less than 50000
+    Around 50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-	Less than 50%
+	More than 50%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
-    Net premium
+    Limited
   </attribute>
   <attribute title="Max Profit" icon="payments" color="info">
     Limited
@@ -33,8 +33,8 @@ tags:
 
 ## Rules
 
-- Check for long buildup stocks and short covering stocks in [Futures Dashboard](https://opstra.definedge.com/futures/dashboard)
-- View should be mildly bullish
+- Check for short buildup stocks and long unwinding stocks in [Futures Dashboard](https://opstra.definedge.com/futures/dashboard)
+- View should be mildly bearish
 
 :::tip
 
@@ -44,8 +44,8 @@ Check for POP for both Call side and Put side and accordingly take trade
 
 ## Legs
 
-<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="Max OI"/>
+<leg side="CE"  transaction="S" moneyNess="ATM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="Max OI"/>
 
 
 ## Adjustments

@@ -1,21 +1,21 @@
 ---
 tags:
-  - bearish
+  - bullish
   - volatile
   - non-volatile
-  - month-start
+  - expiry-week
 ---
 
-# Bear Put Spread
-<img className="graph" src="/img/graphs/bear-x-spread.svg" />
+# Bullish Reverse Calendar Spread
+<img className="graph" src="/img/graphs/bullish-reverse-calendar.svg" />
 
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Moderately Bearish
+    Bullish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
-    Net Debit
+    Net Credit
   </attribute>
   <attribute title="Margin" icon="currency_rupee" color="info">
     Less than 50000
@@ -33,19 +33,24 @@ tags:
 
 ## Rules
 
-- Check for short buildup stocks and long unwinding stocks in [Futures Dashboard](https://opstra.definedge.com/futures/dashboard)
-- View should be mildly bearish
+- Nifty and Bank Nifty only
+- Can be used for Swing trading
+- Apply on 1st to 15th of every month
 
-:::tip
+:::caution
 
-Check for POP for both Call side and Put side and accordingly take trade
+Increase in IV decreases profit and vice versa
 
 :::
 
 ## Legs
 
-<leg side="PE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="Max OI"/>
+<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo="Weekly Expiry"/>
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="+500 Monthly Expiry"/>
 
 
 ## Adjustments
+
+
+
+## Example
