@@ -1,19 +1,17 @@
 ---
 tags:
-  - bearish
-  - less-volatile
-  - month-end
-  - neutral
-  - bearish-neutral
+  - bullish
+  - volatile
+  - month-start
 ---
 
-# Broken Wing Call Butterfly
-<img className="graph" src="/img/graphs/broken-wing-call-butterfly.svg" />
+# Call Back Spread
+<img className="graph" src="/img/graphs/call-back-spread.svg" />
 
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Neutral to Bearish
+    Very Bullish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
     Net Credit
@@ -28,23 +26,19 @@ tags:
     Limited
   </attribute>
   <attribute title="Profit" icon="payments" color="info">
-    Limited
+    Unlimited
   </attribute>
 </grid>
 
 ## Rules
 
-:::info
-
-Strategy must be profitable on one side
-
-:::
+- Strategy should be applied before good news
+- Stock should be high volatile
 
 ## Legs
 
-<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="400" />
-<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="800" />
+<leg side="CE"  transaction="S" moneyNess="ATM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={2} moreInfo="" />
 
 ## Adjustments
 
