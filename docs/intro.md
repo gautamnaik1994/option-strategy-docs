@@ -5,7 +5,7 @@ hide_title: true
 hide_table_of_contents: true
 ---
 
-![Example banner](../static/img/og-image.svg)
+![Example banner](../static/img/og-image.png)
 ## Getting Started
 There are many ways to classify option strategies. Here I have chosen to classify them based in following
 - Spread Strategies

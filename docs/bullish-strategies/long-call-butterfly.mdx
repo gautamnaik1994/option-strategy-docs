@@ -1,0 +1,51 @@
+---
+tags:
+  - less-bullish
+  - less-volatile
+  - expiry-day
+---
+
+# Long Call Butterfly
+<img className="graph" src="/img/graphs/long-call-butterfly.svg" />
+
+## Features
+<!-- :::caution
+
+Following fields might be incorrect
+
+::: -->
+<grid>
+  <attribute title="View" icon="visibility" color="info">
+    Mildly Bullish
+  </attribute>
+  <attribute title="Premium" icon="currency_exchange" color="info">
+    Net Credit
+  </attribute>
+  <attribute title="Margin" icon="currency_rupee" color="info">
+    Around 100000
+  </attribute>
+  <attribute title="POP" icon="percent" color="success">
+    80%
+  </attribute>
+  <attribute title="Max Loss" icon="dangerous" color="warning">
+    Unlimited
+  </attribute>
+  <attribute title="Profit" icon="payments" color="info">
+    Limited
+  </attribute>
+</grid>
+
+## Rules
+
+- Stock should be less/non volatile
+
+## Legs
+
+<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="" />
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo=""/>
+
+## Adjustments
+
+
+## Example
