@@ -54,15 +54,44 @@ html[data-theme="dark"] {
   text-align: center;
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 996px) {
-    padding: 2rem;
+
+  background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+  .content-sec {
+    margin-top: 2rem;
+    h1,
+    p,
+    .button {
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.3;
+    }
+    .button {
+      background-color: white;
+      border: none;
+    }
+  }
+  @include desktop() {
+    padding: 8rem 2rem;
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    .content-sec {
+      margin-top: 0rem;
+      text-align: left;
+    }
   }
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .attribute {
@@ -74,16 +103,19 @@ html[data-theme="dark"] {
   position: relative;
   font-weight: 700;
   line-height: calc(var(--ifm-line-height-base) * 0.8);
+
   .icon {
     position: absolute;
     left: 15px;
     top: 16px;
     font-size: calc(var(--ifm-font-size-base) * 2.2);
   }
+
   .title {
     // color:var(--ifm-background-surface-color);
     color: rgb(0 0 0 / 74%);
   }
+
   .content {
     font-size: calc(var(--ifm-font-size-base) * 1.25);
     margin-top: 4px;
@@ -94,6 +126,7 @@ html[data-theme="dark"] {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+
   @include desktop {
     grid-template-columns: 1fr 1fr;
   }
@@ -102,13 +135,16 @@ html[data-theme="dark"] {
 .leg {
   border-bottom: 1px solid rgb(128 128 128 / 50%);
   padding: 8px 0;
+
   @include desktop {
     padding: 15px 0;
   }
+
   .top-section {
     display: grid;
     grid-template-columns: 30px 50px 40px 30px 1fr;
     grid-gap: 10px;
+
     > div {
       text-align: center;
       border-radius: 3px;
@@ -116,10 +152,12 @@ html[data-theme="dark"] {
       border: 1px solid transparent;
       font-weight: 500;
     }
+
     @include desktop {
-      grid-template-columns: 50px 60px 50px 50px  1fr;
+      grid-template-columns: 50px 60px 50px 50px 1fr;
       grid-template-rows: 50px;
       grid-gap: 15px;
+
       > div {
         display: flex;
         align-items: center;
@@ -127,22 +165,27 @@ html[data-theme="dark"] {
         font-size: calc(var(--ifm-font-size-base) * 1.2);
       }
     }
+
     .transaction {
       &-B {
         background: #81c784;
       }
+
       &-S {
         background: #e57373;
       }
     }
+
     .side {
       &-PE {
         background: #80deea;
       }
+
       &-CE {
         background: #ce93d8;
       }
     }
+
     .more-info {
       // background: white;
       // border-color: #808080;
@@ -150,21 +193,26 @@ html[data-theme="dark"] {
       justify-content: flex-end;
       color: var(--ifm-font-color-base);
     }
+
     .lot-size {
       background: #ececec;
     }
+
     .money-ness {
       &-ITM {
         background: #b0bec5;
       }
+
       &-ATM {
         background: #bdbdbd;
       }
+
       &-OTM {
         background: #ececec;
       }
     }
   }
+
   .bottom-section {
     background-color: var(--ifm-menu-color-background-active);
     border-radius: 5px;
@@ -172,6 +220,7 @@ html[data-theme="dark"] {
     margin-top: 10px;
     font-size: 14px;
     color: var(--ifm-font-color-base);
+
     @include desktop {
       font-size: var(--ifm-font-size-base);
       padding: 5px 10px;
@@ -185,3 +234,29 @@ html[data-theme="dark"] {
   height: auto;
 }
 
+.swiper {
+  width: 300px;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include desktop {
+    width: 520px;
+    height: 350px;
+
+    img {
+      // height: 320px;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+  }
+}

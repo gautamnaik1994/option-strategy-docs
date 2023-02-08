@@ -4,8 +4,8 @@ tags:
   - non-volatile
 ---
 
-# Iron Condor
-<img className="graph" src="/img/graphs/iron-condor.svg" />
+# Iron Butterfly
+<img className="graph" src="/img/graphs/iron-butterfly.svg" />
 
 ## Features
 <grid>
@@ -32,16 +32,13 @@ tags:
 ## Rules
 
 
-:::tip
-Check whether the Put side or Call side is giving higher POP, and accordingly decide
-:::
 
 
 ## Legs
 
 <leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="-200"/>
-<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-100"/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="100"/>
+<leg side="PE"  transaction="S" moneyNess="ATM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="S" moneyNess="ATM" lotSize={1} moreInfo=""/>
 <leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="200"/>
 
 

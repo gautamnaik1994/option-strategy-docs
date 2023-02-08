@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HeroCarousel from '../components/HeroCarousel';
 
 
 import styles from './index.module.css';
@@ -10,17 +11,21 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className='hero hero--primary hero-banner'>
+    <header className='hero hero-banner'>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <HeroCarousel />
+        <div className="content-sec">
+        <h1 className="">{siteConfig.title}</h1>
+        <p className="">{siteConfig.tagline}</p>
         <div className="buttons">
           <Link
-            className="button button--secondary button--lg"
+            className="button button--lg"
             to="/docs/intro">
             Get Started
           </Link>
         </div>
+        </div>
+
       </div>
     </header>
   );
