@@ -2,7 +2,9 @@
 tags:
   - less-bearish
   - less-volatile
+  - before-expiry
   - expiry-day
+  - month-end
 ---
 
 # Long Put Butterfly
@@ -19,13 +21,13 @@ Following fields might be incorrect
     Mildly Bearish
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
-    Net Credit
+    Net Debit
   </attribute>
   <attribute title="Margin" icon="currency_rupee" color="info">
-    Around 100000
+    Around 50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-    80%
+    Less than 40%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
     Limited
@@ -38,11 +40,13 @@ Following fields might be incorrect
 ## Rules
 
 - Stock should be less/non volatile
+- Strategy should be applied 1 day before expiry or on expiry day
+- Strike price different between legs should be equal
 
 ## Legs
 
 <leg side="PE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="" />
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="Max OI" />
 <leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo=""/>
 
 ## Adjustments
