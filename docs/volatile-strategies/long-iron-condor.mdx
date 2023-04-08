@@ -1,25 +1,28 @@
 ---
 tags:
-  - neutral
-  - non-volatile
+  - bullish
+  - bearish
+  - bullish-bearish
+  - volatile
+  - before-event
 ---
 
-# Iron Condor
-<img className="graph" src="/img/graphs/iron-condor.svg" />
+# Long Iron Condor
+<img className="graph" src="/img/graphs/long-condor.svg" />
 
 ## Features
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Non Volatile/Sideways
+    Volatile/ Both Side
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
-    Net Credit
+    Net Debit
   </attribute>
   <attribute title="Margin" icon="currency_rupee" color="info">
     Around 50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-	Greater than 50%
+	Less than 50%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
     Limited
@@ -31,6 +34,8 @@ tags:
 
 ## Rules
 
+- Trade should be taken before some days of results or any other event
+- Use the Volatility List from NSE website
 
 :::tip
 Check whether the Put side or Call side is giving higher POP, and accordingly decide
@@ -39,10 +44,10 @@ Check whether the Put side or Call side is giving higher POP, and accordingly de
 
 ## Legs
 
-<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="-200"/>
-<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-100"/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="100"/>
-<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="200"/>
+<leg side="PE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="-200"/>
+<leg side="PE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="-100"/>
+<leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo="100"/>
+<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={1} moreInfo="200"/>
 
 
 ## Adjustments

@@ -1,19 +1,17 @@
 ---
 tags:
-  - less-bullish
-  - less-volatile
-  - expiry-day
-  - month-end
+  - neutral
+  - non-volatile
 ---
 
 # Long Call Butterfly
-<img className="graph" src="/img/graphs/long-call-butterfly.svg" />
+<img className="graph" src="/img/graphs/iron-butterfly.svg" />
 
 ## Features
 
 <grid>
   <attribute title="View" icon="visibility" color="info">
-    Mildly Bullish
+    Neutral
   </attribute>
   <attribute title="Premium" icon="currency_exchange" color="info">
     Net Debit
@@ -22,7 +20,7 @@ tags:
     Around 50000
   </attribute>
   <attribute title="POP" icon="percent" color="success">
-    Less than 50%
+   Less than 50%
   </attribute>
   <attribute title="Max Loss" icon="dangerous" color="warning">
     Limited
@@ -35,11 +33,12 @@ tags:
 ## Rules
 
 - Stock should be less/non volatile
+- PE side also can be used
 
 ## Legs
 
-<leg side="CE"  transaction="B" moneyNess="ATM" lotSize={1} moreInfo=""/>
-<leg side="CE"  transaction="S" moneyNess="OTM" lotSize={2} moreInfo="" />
+<leg side="CE"  transaction="B" moneyNess="ITM" lotSize={1} moreInfo=""/>
+<leg side="CE"  transaction="S" moneyNess="ATM" lotSize={2} moreInfo="" />
 <leg side="CE"  transaction="B" moneyNess="OTM" lotSize={1} moreInfo=""/>
 
 ## Adjustments

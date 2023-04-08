@@ -8,7 +8,6 @@ import "swiper/css/effect-cards";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 
-
 // import required modules
 import { EffectCards, Pagination, Autoplay } from "swiper";
 
@@ -33,18 +32,23 @@ export default function App() {
       >
         <SwiperSlide>
           <img src="/img/graphs/batman.svg" />
+          <div>Batman</div>
         </SwiperSlide>
         <SwiperSlide>
           <img src="/img/graphs/lizard.svg" />
+          <div>Lizard</div>
         </SwiperSlide>
         <SwiperSlide>
           <img src="/img/graphs/broken-wing-put-butterfly.svg" />
+          <div>Broken Butterfly</div>
         </SwiperSlide>
         <SwiperSlide>
           <img src="/img/graphs/long-put-ladder.svg" />
-              </SwiperSlide>
-              <SwiperSlide>
+          <div>Put Ladder</div>
+        </SwiperSlide>
+        <SwiperSlide>
           <img src="/img/graphs/call-calendar-spread.svg" />
+          <div>Calendar Spread</div>
         </SwiperSlide>
       </Swiper>
     </>

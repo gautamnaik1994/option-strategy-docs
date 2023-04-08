@@ -45,6 +45,10 @@ html[data-theme="dark"] {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .menu {
   font-weight: var(--ifm-font-weight-regular);
 }
@@ -56,31 +60,39 @@ html[data-theme="dark"] {
   overflow: hidden;
 
   background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+
   .content-sec {
     margin-top: 2rem;
+
     h1,
     p,
     .button {
       color: #333;
     }
+
     h1 {
       margin-bottom: 10px;
     }
+
     p {
       line-height: 1.3;
     }
+
     .button {
       background-color: white;
       border: none;
     }
   }
+
   @include desktop() {
     padding: 8rem 2rem;
+
     .container {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
     }
+
     .content-sec {
       margin-top: 0rem;
       text-align: left;
@@ -99,7 +111,7 @@ html[data-theme="dark"] {
   background: var(--bg-color, --ifm-color-primary);
   border-radius: var(--ifm-global-radius);
   color: var(--fg-color, #333);
-  padding-left: 65px;
+  padding-left: 50px;
   position: relative;
   font-weight: 700;
   line-height: calc(var(--ifm-line-height-base) * 0.8);
@@ -107,18 +119,20 @@ html[data-theme="dark"] {
   .icon {
     position: absolute;
     left: 15px;
-    top: 16px;
-    font-size: calc(var(--ifm-font-size-base) * 2.2);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(var(--ifm-font-size-base) * 1.5);
   }
 
   .title {
-    // color:var(--ifm-background-surface-color);
+    color:var(--ifm-background-surface-color);
+    font-size: calc(var(--ifm-font-size-base) * 0.9);
     color: rgb(0 0 0 / 74%);
   }
 
   .content {
-    font-size: calc(var(--ifm-font-size-base) * 1.25);
-    margin-top: 4px;
+    font-size: calc(var(--ifm-font-size-base) * 1.05);
+    // margin-top: 4px;
   }
 }
 
@@ -145,7 +159,7 @@ html[data-theme="dark"] {
     grid-template-columns: 30px 50px 40px 30px 1fr;
     grid-gap: 10px;
 
-    > div {
+    >div {
       text-align: center;
       border-radius: 3px;
       color: #333;
@@ -158,7 +172,7 @@ html[data-theme="dark"] {
       grid-template-rows: 50px;
       grid-gap: 15px;
 
-      > div {
+      >div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -236,7 +250,7 @@ html[data-theme="dark"] {
 
 .swiper {
   width: 300px;
-  height: 200px;
+  height: 250px;
 
   img {
     width: 100%;
@@ -258,5 +272,100 @@ html[data-theme="dark"] {
     align-items: center;
     justify-content: center;
     border-radius: 18px;
+    position: relative;
+
+    div {
+      position: absolute;
+      bottom: 25px;
+      font-weight: bold;
+    }
+  }
+}
+
+.strategy-calendar {
+  padding-top: 2rem;
+
+  .tab-content {
+    display: none;
+
+    &.sc-1 {
+      display: block;
+    }
+
+    &.mc-2 {
+      display: block;
+    }
+
+    &.ec-3 {
+      display: block;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .button-holder {
+    .button {
+      --ifm-button-size-multiplier: 0.9;
+      background: var(--ifm-color-secondary-darker);
+      font-weight: var(--ifm-font-weight-base);
+      text-transform: uppercase;
+      padding-top: 7px;
+      margin: 5px;
+
+      .icon {
+        font-size: 16px;
+        margin-right: 3px;
+        vertical-align: top;
+      }
+
+      &.sc-1 {
+        background: var(--ifm-color-primary-lightest);
+      }
+
+      &.mc-2 {
+        background: var(--ifm-color-primary-lightest);
+      }
+
+      &.ec-3 {
+        background: var(--ifm-color-primary-lightest);
+      }
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .table-holder {
+    @include desktop{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .volatilty-Less{
+      color:var(--ifm-color-success)
+    }
+    .volatilty-High{
+      color:var(--ifm-color-danger)
+    }
+
+
+    .table {
+      display: table;
+      width: 100%;
+      font-size: var(--ifm-font-size-base);
+    }
+    .table-title {
+      display: none;
+      padding: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      background: var(--ifm-color-primary-dark);
+      color:white;
+      @include desktop{
+        display: block;
+      }
+    }
   }
 }
