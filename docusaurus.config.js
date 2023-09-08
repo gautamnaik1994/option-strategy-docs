@@ -38,7 +38,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/gautamnaik1994/option-strategy-docs/",
+          editUrl: "https://github.com/gautamnaik1994/option-strategy-docs/blob/main/",
         },
         blog: {
           showReadingTime: true,
